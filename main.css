@@ -1,0 +1,115 @@
+:root {
+    --hot-magenta: #ff02d0;
+    --dark-side: #181c25;
+    --dark-main: #0e121a;
+    --dark-player: #202530;
+
+    --dark-main-text: #fff;
+  }
+  /*** Global Styles ****/
+  * {
+      margin: 0;
+      padding: 0;
+  }
+  body {
+      
+      color: var(--dark-main-text);
+      max-height: 100vh;
+      overflow-y: none;
+  }
+  img {
+      max-width: 100%;
+  }
+  figure {
+      margin: 0;
+  }
+  ul {
+      list-style: none;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+}
+   /*** End Global Styles ****/
+
+.header {
+    grid-area: headertop;
+}
+.footer {
+    grid-area: player-footer;
+    background-color: var(--dark-player);
+}
+.content {
+    grid-area: main;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--dark-side);
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    max-height: 100vh;
+    overflow-y: none;
+    grid-template-areas: 
+      "sidebar sidebar main main main main main main main main main main"
+      "sidebar sidebar main main main main main main main main main main"
+      "sidebar sidebar main main main main main main main main main main"
+      "sidebar sidebar main main main main main main main main main main"
+      "sidebar sidebar main main main main main main main main main main"
+      "sidebar sidebar main main main main main main main main main main"
+      "player-footer player-footer player-footer player-footer   player-footer   player-footer   player-footer   player-footer   player-footer player-footer  player-footer  player-footer ";
+}
+* {box-sizing: border-box;}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-main);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.main-feed {
+    padding: 55px 50px;
+    max-height: 100%;
+    overflow-y: scroll;
+}
+    .main-feed header {
+        font-size: 20px; 
+
+    }
+    .main-feed img {
+        border-radius: 5px;
+    }
+    .main-feed .thread {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+.main-sidebar {
+    padding-left: 40px;
+    padding-top: 55px;
+}
+    .main-sidebar li {
+        padding-bottom: 30px;
+    }
+    .main-sidebar figure > img {
+        border-radius: 50%;
+    }
+    .main-sidebar article {
+        display: flex;
+        align-items: center;
+    }
+    .main-sidebar figure {
+        padding-right: 20px;
+    }
+    .main-sidebar .album-meta {
+        flex: 1;
+    }
